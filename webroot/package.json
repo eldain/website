@@ -1,0 +1,29 @@
+{
+  "name": "chia-network-website",
+  "version": "1.0.0",
+  "description": "The website for Chia Network",
+  "scripts": {
+    "browsersync": "browser-sync start --port 8000 --server --no-notify --files '*.html' '*.css'",
+    "build-task:scss-compile": "node-sass-chokidar --source-map true ./src/scss/ -o ./dist/css",
+    "build-task:autoprefixer": "postcss ./dist/css/*.css --use autoprefixer -d ./dist/css",
+    "sass:build": "npm-run-all -p build-task:*",
+    "sass:watch": "chokidar './src/scss/**/*.scss' -c 'npm run sass:build'",
+    "dev": "npm-run-all -p browsersync sass:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chia-Network/website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Chia-Network/website/issues"
+  },
+  "homepage": "https://github.com/Chia-Network/website#readme",
+  "dependencies": {
+    "autoprefixer": "^7.2.5",
+    "browser-sync": "^2.23.6",
+    "chokidar-cli": "^1.2.0",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^5.0.0"
+  }
+}

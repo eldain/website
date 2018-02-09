@@ -1,2 +1,5 @@
 .DS_Store
 **/.DS_Store
+node_modules
+webroot/dist/css/main.css
+webroot/dist/css/main.css.map

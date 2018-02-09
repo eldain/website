@@ -2,6 +2,16 @@ This is the web site at <https://chia.network/>. Pull requests accepted!
 
 If you have ideas for the FAQ, check out <https://github.com/Chia-Network/website/tree/master/webroot/faq>
 
+# Development
+
+To develop and contribute locally:
+````bash
+    $ cd webroot
+    $ npm install
+    $ npm run dev
+````
+The majority of the dist/ folder is git ignored, please contribute new styles to src/scss/
+
 You can see this web site locally with python 2 as follows:
 
 ````bash
